@@ -27,7 +27,7 @@ try:
         for line in file:
             line_inspect = line.replace('\n', '').replace('\\', '')[1:-1].split('","')
 
-            # MySQL doesn't line empty string for no int
+            # MySQL doesn't like empty string for no int
             if (line_inspect[8] == ''):
                 line_inspect[8] = '0'
 
