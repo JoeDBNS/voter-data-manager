@@ -33,7 +33,7 @@ CREATE TABLE working (
     school_district_name VARCHAR(100),
     state_house_district_code VARCHAR(5),
     state_house_district_name VARCHAR(100),
-    state_enate_district_code VARCHAR(5),
+    state_senate_district_code VARCHAR(5),
     state_senate_district_name VARCHAR(100),
     us_congress_district_code VARCHAR(5),
     us_congress_district_name VARCHAR(100),
