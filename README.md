@@ -1,5 +1,9 @@
 # voter-data-manager
 
+
+Total records as of March 2026 - 8291419
+
+
 ## Steps for first import
 1) Clean .csv data
 2) Create voter_data_mi database (DEV, TEST, and PROD)
