@@ -47,6 +47,7 @@ CREATE TABLE working (
     voter_status_type_code VARCHAR(2),
     UOCAVA_status_code CHAR(1),
     UOCAVA_status_name VARCHAR(40),
+    is_permanent_absentee_application_voter VARCHAR(12),
     primary key(voter_id)
 );
 
