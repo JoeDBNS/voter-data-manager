@@ -1,13 +1,12 @@
-import mysql.connector, time
+import mysql.connector, time, json, os
 
 start_time = time.time()
 
-cnx = mysql.connector.connect(
-    user='',
-    password='',
-    host='',
-    database=''
-)
+config_path = os.path.join(os.path.dirname(__file__), '..', '_config', 'db_config.json')
+with open(config_path, 'r') as config_file:
+    db_config = json.load(config_file)
+
+cnx = mysql.connector.connect(**db_config)
 cursor = cnx.cursor()
 bulk_insert_amount = 10000
 total_processed = 0
