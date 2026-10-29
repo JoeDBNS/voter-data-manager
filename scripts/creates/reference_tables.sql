@@ -78,3 +78,64 @@ CREATE TABLE villages (
     PRIMARY KEY (id),
     FOREIGN KEY (county_id, jurisdiction_id) REFERENCES jurisdictions(county_id, jurisdiction_id)
 );
+
+
+-- ============================================================
+-- STATE_HOUSE_DISTRICTS
+-- Source: working table
+-- state_house_district_id is globally unique (PK)
+-- ============================================================
+CREATE TABLE state_house_districts (
+    state_house_district_id VARCHAR(5) NOT NULL,
+    state_house_district_name VARCHAR(100),
+    PRIMARY KEY (state_house_district_id)
+);
+
+
+-- ============================================================
+-- STATE_SENATE_DISTRICTS
+-- Source: working table
+-- state_senate_district_id is globally unique (PK)
+-- ============================================================
+CREATE TABLE state_senate_districts (
+    state_senate_district_id VARCHAR(5) NOT NULL,
+    state_senate_district_name VARCHAR(100),
+    PRIMARY KEY (state_senate_district_id)
+);
+
+
+-- ============================================================
+-- US_CONGRESS_DISTRICTS
+-- Source: working table
+-- us_congress_district_id is globally unique (PK)
+-- ============================================================
+CREATE TABLE us_congress_districts (
+    us_congress_district_id VARCHAR(5) NOT NULL,
+    us_congress_district_name VARCHAR(100),
+    PRIMARY KEY (us_congress_district_id)
+);
+
+
+-- ============================================================
+-- COUNTY_COMMISSIONER_DISTRICTS
+-- Source: working table
+-- county_commissioner_district_id is globally unique (PK)
+-- ============================================================
+CREATE TABLE county_commissioner_districts (
+    county_commissioner_district_id VARCHAR(5) NOT NULL,
+    county_commissioner_district_name VARCHAR(100),
+    PRIMARY KEY (county_commissioner_district_id)
+);
+
+
+-- ============================================================
+-- UOCAVA_STATUSES
+-- Source: working table
+-- UOCAVA_status_id is globally unique (PK)
+-- ============================================================
+CREATE TABLE UOCAVA_statuses (
+    UOCAVA_status_id CHAR(1) NOT NULL,
+    UOCAVA_status_name VARCHAR(40),
+    PRIMARY KEY (UOCAVA_status_id)
+);
+
