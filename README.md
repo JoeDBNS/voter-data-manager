@@ -11,19 +11,21 @@ Total records as of March 2026 - 8291419
 In DEV:
    1) Create **working** table
    2) Import data into **working**
-   3) Create tables from **working** data in order
+   3) Create tables from reference_data files using **reference_tables.sql**
       1) **counties**
       2) **jurisdictions**
-      3) **school_districts**
-      4) **state_house_districts**
-      5) **state_senate_districts**
-      6) **us_congress_districts**
-      7) **county_commissioner_districts**
-      8) **village_districts**
-      9) **uocava_statuses**
-      10) **addresses**
-      11) **voters**
-   4) Add all forign keys in order
+      3) **precincts**
+      4) **school_districts**
+      5) **village_districts**
+   4) Create tables from **working** data in order
+      1) **state_house_districts**
+      2) **state_senate_districts**
+      3) **us_congress_districts**
+      4) **county_commissioner_districts**
+      5) **uocava_statuses**
+      6)  **addresses**
+      7)  **voters**
+   5) Add all forign keys in order
       1) **addresses**
       2) **voters**
 
