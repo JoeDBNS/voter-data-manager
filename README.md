@@ -16,24 +16,24 @@ In DEV:
    2) Insert data into reference data tables
       1) **import_counties.py**
       2) **import_jurisdictions.py**
-      3) **import_precincts.py**
       4) **import_school_districts.py**
+      3) **import_precincts.py**
       5) **import_village_districts.py**
-      6) **import_congress_districts.py**
-      7) **import_county_commissioner_districts.py**
       8) **import_house_districts.py**
       9) **import_senate_districts.py**
+      6) **import_congress_districts.py**
+      7) **import_county_commissioner_districts.py**
       10) **import_uocava_statuses.py**
 
    3) Create **working** table using **working.sql**
 
    4) Import data into **working** using **import_working.py**
 
-   5)  Create tables from **working** data in order
+   5) Create tables from **working** data in order
       1) **addresses**
       2) **voters**
 
-   6)  Add all forign keys in order
+   6) Add all forign keys in order
       1) **addresses**
       2) **voters**
 
