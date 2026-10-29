@@ -54,21 +54,21 @@ CREATE TABLE working (
 
 -- TEMP below - working through adjustments needed for the above script to import all records without errors
 
--- ALTER TABLE mi MODIFY voter_id decimal(38,0);
--- ALTER TABLE mi MODIFY voter_id int(38);
-ALTER TABLE mi MODIFY voter_id varchar(20);
+-- ALTER TABLE working MODIFY voter_id decimal(38,0);
+-- ALTER TABLE working MODIFY voter_id int(38);
+ALTER TABLE working MODIFY voter_id varchar(20);
 
--- ALTER TABLE mi MODIFY is_permanent_absentee_application_voter char(1);
-ALTER TABLE mi MODIFY is_permanent_absentee_application_voter varchar(12);
+-- ALTER TABLE working MODIFY is_permanent_absentee_application_voter char(1);
+ALTER TABLE working MODIFY is_permanent_absentee_application_voter varchar(12);
 
--- ALTER TABLE mi MODIFY county_code char(2);
-ALTER TABLE mi MODIFY county_code varchar(12);
+-- ALTER TABLE working MODIFY county_code char(2);
+ALTER TABLE working MODIFY county_code varchar(12);
 
--- ALTER TABLE mi MODIFY jurisdiction_code char(2);
-ALTER TABLE mi MODIFY jurisdiction_code varchar(12);
+-- ALTER TABLE working MODIFY jurisdiction_code char(2);
+ALTER TABLE working MODIFY jurisdiction_code varchar(12);
 
--- ALTER TABLE mi MODIFY precinct char(2);
-ALTER TABLE mi MODIFY precinct varchar(14);
+-- ALTER TABLE working MODIFY precinct char(2);
+ALTER TABLE working MODIFY precinct varchar(14);
 
--- ALTER TABLE mi MODIFY residence_street_number decimal(38,0);
-ALTER TABLE mi MODIFY residence_street_number int(8);
+-- ALTER TABLE working MODIFY residence_street_number decimal(38,0);
+ALTER TABLE working MODIFY residence_street_number int(8);
