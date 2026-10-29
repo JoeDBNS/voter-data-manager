@@ -40,7 +40,7 @@ VOTERS
         FOREIGN KEY (address_id) REFERENCES addresses_dev(address_id)
     );
 
-    INSERT INTO voters_dev (voter_id, last_name, first_name, middle_name, name_suffix, birth_year, gender, is_permanent_absentee_voter, voter_status_type_code, is_permanent_absentee_application_voter, date_of_registration, mail_address_1, mail_address_2, mail_address_3, mail_address_4, mail_address_5) 
+    INSERT INTO voters_dev (voter_id, last_name, first_name, middle_name, name_suffix, birth_year, gender, is_permanent_absentee_voter, voter_status_type_code, is_permanent_absentee_application_voter, date_of_registration, mail_address_1, mail_address_2, mail_address_3, mail_address_4, mail_address_5)
     SELECT DISTINCT voter_id, last_name, first_name, middle_name, name_suffix, birth_year, gender, is_permanent_absentee_voter, voter_status_type_code, is_permanent_absentee_application_voter, date_of_registration, mail_address_1, mail_address_2, mail_address_3, mail_address_4, mail_address_5
     FROM mi_dev;
 
@@ -92,22 +92,11 @@ ADDRESSES
         PRIMARY KEY (address_id)
     );
 
-    INSERT INTO addresses_dev (house_number_character, residence_street_number, house_suffix, pre_direction, street_name, street_type, suffix_direction, residence_extension, city, state, zip, precinct, ward, village_precinct, school_precinct) 
+    INSERT INTO addresses_dev (house_number_character, residence_street_number, house_suffix, pre_direction, street_name, street_type, suffix_direction, residence_extension, city, state, zip, precinct, ward, village_precinct, school_precinct)
     SELECT DISTINCT house_number_character, residence_street_number, house_suffix, pre_direction, street_name, street_type, suffix_direction, residence_extension, city, state, zip, precinct, ward, village_precinct, school_precinct
     FROM mi_dev;
 
 
-COUNTIES
-    county_code                             | CHAR(2)       | NO   | PRI | NULL | update
-    county_name                             | VARCHAR(40)   | YES  |     | NULL |
-
-JURISDICTIONS
-    jurisdiction_code                       | VARCHAR(5)    | NO   | PRI | NULL | update
-    jurisdiction_name                       | VARCHAR(40)   | YES  |     | NULL |
-
-SCHOOL_DISTRICTS
-    school_district_code                    | VARCHAR(5)    | NO   | PRI | NULL | update
-    school_district_name                    | VARCHAR(100)  | YES  |     | NULL |
 
 STATE_HOUSE_DISTRICTS
     state_house_district_code               | VARCHAR(5)    | NO   | PRI | NULL | update
@@ -124,10 +113,6 @@ US_CONGRESS_DISTRICTS
 COUNTY_COMMISSIONER_DISTRICTS
     county_commissioner_district_code       | VARCHAR(5)    | NO   | PRI | NULL | update
     county_commissioner_district_name       | VARCHAR(100)  | YES  |     | NULL |
-
-VILLAGE_DISTRICTS
-    village_district_code                   | VARCHAR(2)    | NO   | PRI | NULL | update
-    village_district_name                   | VARCHAR(100)  | YES  |     | NULL |
 
 UOCAVA_STATUSES
     UOCAVA_status_code                      | CHAR(1)       | NO   | PRI | NULL | update
