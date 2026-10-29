@@ -62,15 +62,19 @@ CREATE TABLE precincts (
 -- ============================================================
 -- VILLAGES
 -- Source: Village Codes.csv
--- Has its own surrogate village_id from the source data
--- Links to a county + jurisdiction + village_district_id
+-- id: auto-increment surrogate PK
+-- village_id: source ID from CSV (not unique — some villages span
+--   multiple county+jurisdiction pairs with the same village_id)
+-- Match on (village_id, county_id, jurisdiction_id) when linking
+--   from address records
 -- ============================================================
 CREATE TABLE villages (
-    village_id INT NOT NULL,
+    id INT NOT NULL AUTO_INCREMENT,
+    village_id INT,
     county_id CHAR(2),
     jurisdiction_id VARCHAR(5),
     village_district_id VARCHAR(5),
     village_name VARCHAR(100),
-    PRIMARY KEY (village_id),
+    PRIMARY KEY (id),
     FOREIGN KEY (county_id, jurisdiction_id) REFERENCES jurisdictions(county_id, jurisdiction_id)
 );
