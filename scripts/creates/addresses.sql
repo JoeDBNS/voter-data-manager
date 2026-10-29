@@ -1,0 +1,50 @@
+-- address_id                              | NUMERIC(38)   | NO   | PRI | NULL | new
+-- house_number_character                  | CHAR(1)       | YES  |     | NULL |
+-- residence_street_number                 | NUMERIC(38)   | YES  |     | NULL |
+-- house_suffix                            | VARCHAR(4)    | YES  |     | NULL |
+-- pre_direction                           | VARCHAR(2)    | YES  |     | NULL |
+-- street_name                             | VARCHAR(40)   | YES  |     | NULL |
+-- street_type                             | VARCHAR(4)    | YES  |     | NULL |
+-- suffix_direction                        | VARCHAR(2)    | YES  |     | NULL |
+-- residence_extension                     | VARCHAR(13)   | YES  |     | NULL |
+-- city                                    | VARCHAR(100)  | YES  |     | NULL |
+-- state                                   | VARCHAR(6)    | YES  |     | NULL |
+-- zip                                     | VARCHAR(10)   | YES  |     | NULL |
+-- precinct                                | VARCHAR(6)    | YES  |     | NULL |
+-- ward                                    | VARCHAR(6)    | YES  |     | NULL |
+-- village_precinct                        | VARCHAR(6)    | YES  |     | NULL |
+-- school_precinct                         | VARCHAR(6)    | YES  |     | NULL |
+-- county_code                             | CHAR(2)       | YES  | FGN | NULL | update
+-- jurisdiction_code                       | VARCHAR(5)    | YES  | FGN | NULL | update
+-- school_district_code                    | VARCHAR(5)    | YES  | FGN | NULL | update
+-- state_house_district_code               | VARCHAR(5)    | YES  | FGN | NULL | update
+-- state_senate_district_code              | VARCHAR(5)    | YES  | FGN | NULL | update
+-- us_congress_district_code               | VARCHAR(5)    | YES  | FGN | NULL | update
+-- county_commissioner_district_code       | VARCHAR(5)    | YES  | FGN | NULL | update
+-- village_district_code                   | VARCHAR(2)    | YES  | FGN | NULL | update
+-- UOCAVA_status_code                      | CHAR(1)       | YES  | FGN | NULL | update
+
+CREATE TABLE addresses (
+    address_id NUMERIC(38) NOT NULL AUTO_INCREMENT,
+    house_number_character CHAR(1),
+    residence_street_number NUMERIC(38),
+    house_suffix VARCHAR(4),
+    pre_direction VARCHAR(2),
+    street_name VARCHAR(40),
+    street_type VARCHAR(4),
+    suffix_direction VARCHAR(2),
+    residence_extension VARCHAR(13),
+    city VARCHAR(100),
+    state VARCHAR(6),
+    zip VARCHAR(10),
+    precinct VARCHAR(6),
+    ward VARCHAR(6),
+    village_precinct VARCHAR(6),
+    school_precinct VARCHAR(6),
+    PRIMARY KEY (address_id)
+);
+
+
+INSERT INTO addresses (house_number_character, residence_street_number, house_suffix, pre_direction, street_name, street_type, suffix_direction, residence_extension, city, state, zip, precinct, ward, village_precinct, school_precinct)
+SELECT DISTINCT house_number_character, residence_street_number, house_suffix, pre_direction, street_name, street_type, suffix_direction, residence_extension, city, state, zip, precinct, ward, village_precinct, school_precinct
+FROM working;
