@@ -11,9 +11,9 @@ cursor = cnx.cursor()
 bulk_insert_amount = 500
 total_processed = 0
 table_name = 'school_districts'
-source_path = ''
+source_path = os.path.join(os.path.dirname(__file__), '..', 'reference_data', 'school_codes.csv')
 
-# Source: School Codes.csv
+# Source: school_codes.csv
 # Columns: COUNTY CODE, JURISDICTION CODE, SCHOOL DISTRICT CODE, SCHOOL DISTRICT NAME
 
 try:

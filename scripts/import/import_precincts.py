@@ -11,9 +11,9 @@ cursor = cnx.cursor()
 bulk_insert_amount = 500
 total_processed = 0
 table_name = 'precincts'
-source_path = ''
+source_path = os.path.join(os.path.dirname(__file__), '..', 'reference_data', 'precinct_codes.csv')
 
-# Source: Precinct Codes.csv
+# Source: precinct_codes.csv
 # Columns: COUNTY CODE, COUNTY NAME, JURISDICTION CODE, JURISDICTION NAME, PRECINCT CODE, PRECINCT NAME
 # Note: county_name and jurisdiction_name are skipped — already stored in their respective tables
 

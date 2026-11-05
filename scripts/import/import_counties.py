@@ -11,9 +11,9 @@ cursor = cnx.cursor()
 bulk_insert_amount = 50  # only 83 counties total
 total_processed = 0
 table_name = 'counties'
-source_path = ''
+source_path = os.path.join(os.path.dirname(__file__), '..', 'reference_data', 'county_codes.csv')
 
-# Source: County Codes.csv
+# Source: county_codes.csv
 # Columns: County Code, County Name
 
 try:
